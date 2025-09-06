@@ -1,0 +1,6 @@
+:root {
+}
+
+#CurrentRoll {
+    align-items: flex-start;
+}

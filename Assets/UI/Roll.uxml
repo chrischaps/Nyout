@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/RollStyle.uss?fileID=7433441132597879392&amp;guid=9aa27d4139255374a962b9798936c2ad&amp;type=3#RollStyle" />
+    <ui:VisualElement name="Container" style="flex-grow: 1;">
+        <ui:Label text="3" name="RollAmount">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="currentRollValue" data-source-type="GameManager, Assembly-CSharp" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:Label>
+    </ui:VisualElement>
+</ui:UXML>

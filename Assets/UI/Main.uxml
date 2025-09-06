@@ -1,0 +1,28 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Main.uss?fileID=7433441132597879392&amp;guid=b14cf1db88aab75488e87640ac8194e5&amp;type=3#Main" />
+    <ui:VisualElement name="Root" style="flex-grow: 1;">
+        <ui:VisualElement name="Top" style="flex-grow: 1; height: 50%;">
+            <ui:Button text="Roll" name="RollButton" style="height: auto; font-size: 48px; width: 25%;" />
+            <ui:Label text="Label" name="PlayerTurnLabel" data-source-type="GameManager, Assembly-CSharp" data-source-path="CurrentPlayer" enabled="false">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="CurrentPlayer" data-source-type="GameManager, Assembly-CSharp" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="RULES" name="PlayerTurnLabel" data-source-type="GameManager, Assembly-CSharp" data-source-path="CurrentPlayer" style="-unity-font-style: bold; font-size: 48px;" />
+            <ui:Label text="1) Click ROLL" name="PlayerTurnLabel" data-source-type="GameManager, Assembly-CSharp" data-source-path="CurrentPlayer" style="font-size: 24px;" />
+            <ui:Label text="2) Click one of your horses" name="PlayerTurnLabel" data-source-type="GameManager, Assembly-CSharp" data-source-path="CurrentPlayer" style="font-size: 24px;" />
+            <ui:Label text="3) Pick Path (if choice)" name="PlayerTurnLabel" data-source-type="GameManager, Assembly-CSharp" data-source-path="CurrentPlayer" style="font-size: 24px;" />
+            <ui:Label text="4) Switch players" name="PlayerTurnLabel" data-source-type="GameManager, Assembly-CSharp" data-source-path="CurrentPlayer" style="font-size: 24px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Bottom" style="flex-grow: 1; align-content: flex-end; justify-content: flex-end; height: 50%;">
+            <ui:VisualElement name="CurrentRoll" style="flex-grow: 1; position: absolute; right: auto; bottom: auto; left: auto; top: auto; align-items: center; justify-content: center; width: 100px; height: 100px; align-self: auto; align-content: flex-end; border-top-width: 5px; border-right-width: 5px; border-left-width: 5px; border-bottom-width: 5px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+                <ui:Label text="Roll Value" style="justify-content: flex-start; align-content: flex-start; align-self: auto; top: 13%;" />
+                <ui:Label text="3" name="CurrentRollValue" style="font-size: 64px;">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="currentRollValue" data-source-type="GameManager, Assembly-CSharp" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
